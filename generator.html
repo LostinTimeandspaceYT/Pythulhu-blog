@@ -1,0 +1,28 @@
+---
+layout: default
+title: JSON Generator
+---
+
+<h2>Generate a Character Sheet</h2>
+<form id="gen-form">
+  Name: <input name="name"><br>
+  Class: <input name="class"><br>
+  <button type="button" onclick="generate()">Download JSON</button>
+</form>
+
+<script>
+function generate() {
+  const form = document.forms['gen-form'];
+  const data = {
+    name: form.name.value,
+    class: form.class.value
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${data.name || "character"}.json`;
+  a.click();
+}
+</script>
+

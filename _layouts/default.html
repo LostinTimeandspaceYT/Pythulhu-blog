@@ -10,8 +10,19 @@
     <header>
       <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
       <nav>
-        <a href="{{ "/" | relative_url }}">Home</a>
-        <a href="{{ "/generator.html" | relative_url }}">Character Generator</a>
+        <a href="{{ "/" | relative_url }}">
+          {% capture home_icon %}{% include icons/home.svg %}{% endcapture %}
+          {{ home_icon | raw }} Home
+        </a>
+        <a href="{{ "/generator.html" | relative_url }}">
+
+          {% capture generator_icon %}{% include icons/generator.svg %}{% endcapture %}
+          {{ generator_icon | raw }} Character Generator
+        </a>
+      <a href="https://github.com/LostinTimeandspaceYT/pythulhu" class="inline-flex items-center gap-2 hover:text-[#c4b89c]">
+        {% capture git_icon %}{% include icons/github.svg %}{% endcapture %}
+        {{ git_icon | raw }} Source Code
+      </a>
       </nav>
     </header>
     <main class="page">

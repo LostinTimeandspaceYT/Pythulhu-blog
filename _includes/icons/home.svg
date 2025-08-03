@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="16" fill="url('#myBackgroundGradient')"></circle>
+        <path fill="url('#myGradient')" stroke="none" d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z" transform="scale(0.8) rotate(0)" transform-origin="center" style="transform-origin: center center;"></path>
+        <defs>
+            <linearGradient id="myBackgroundGradient" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#000000"></stop>
+                <stop offset="100%" stop-color="#000000"></stop>
+            </linearGradient>
+            <linearGradient id="myGradient" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#8ff0a4"></stop>
+                <stop offset="100%" stop-color="#26a269"></stop>
+            </linearGradient>
+        </defs>
+    </svg>

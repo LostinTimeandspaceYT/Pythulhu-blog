@@ -14,6 +14,7 @@ gameSelect.addEventListener("change", async () => {
     const res = await fetch(`${basePath}/data/${game}.json`);
     const schema = await res.json();
     window.lastLoadedSchema = schema;
+    renderSchemaMeta(schema);
 
     const form = document.createElement("form");
     form.id = `${game}-form`;
@@ -152,6 +153,8 @@ window.generateJSON = function () {
         return;
     }
 
+    renderSchemaMeta(schema);
+
     schema.groups.forEach(group => {
         const top = group.title === "Basic Info" ? null : group.title;
 
@@ -187,7 +190,6 @@ window.generateJSON = function () {
         });
     });
 
-    // Backfill missing checkboxes with false
     for (const name of checkboxFields) {
         if (!(name in flat)) {
             const path = fieldPathMap[name];
@@ -204,3 +206,29 @@ window.generateJSON = function () {
     a.download = `${flat.name || "character"}.json`;
     a.click();
 };
+
+function renderSchemaMeta(schema) {
+    const footer = document.getElementById("legal-footer");
+    if (!footer || !schema.meta) return;
+
+    const { legal, author, version, homepage } = schema.meta;
+    const parts = [];
+
+    if (legal) parts.push(`<span class="block mb-1">${legal}</span><br>`);
+    if (author || version) {
+        parts.push(
+          `<span class="block text-xs text-[#666]">` +
+          `${version ? `Version: ${version} ` : ""}` +
+          `${author ? `by ${author}<br>` : ""}` +
+          `</span>`
+        );
+    }
+    if (homepage) {
+        parts.push(
+            `<a href="${homepage}" target="_blank" class="text-xs underline text-[#888] hover:text-[#bbb]">More info</a>`
+        );
+    }
+
+    footer.innerHTML = parts.join("");
+    footer.classList.remove("hidden");
+}

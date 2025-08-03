@@ -1,28 +1,28 @@
 ---
 layout: default
-title: JSON Generator
+title: Character Generator
 ---
 
-<h2>Generate a Character Sheet</h2>
-<form id="gen-form">
-  Name: <input name="name"><br>
-  Class: <input name="class"><br>
-  <button type="button" onclick="generate()">Download JSON</button>
-</form>
+<section>
+  <h2 class="text-2xl mb-4">Character Sheet Generator</h2>
 
-<script>
-function generate() {
-  const form = document.forms['gen-form'];
-  const data = {
-    name: form.name.value,
-    class: form.class.value
-  };
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `${data.name || "character"}.json`;
-  a.click();
-}
-</script>
+  <label for="game-select" class="block mb-2">Choose your game system:</label>
+  <select id="game-select" class="mb-6 px-2 py-1 bg-[#2a2a2a] text-parchment">
+    <option value="">-- Select a game --</option>
+    <option value="coc">Call of Cthulhu</option>
+    <option value="pulp">Pulp Cthulhu</option>
+    <!-- Add more systems here -->
+  </select>
 
+  <div id="form-container" class="mt-4">
+    <!-- Game-specific forms appear here -->
+  </div>
+
+  <div id="result-download" class="mt-8 hidden">
+    <button onclick="generateJSON()" class="text-parchment hover:text-[#f4e3b2] underline">
+      Download JSON
+    </button>
+  </div>
+</section>
+
+<script src="{{ "/assets/character_generator.js" | relative_url }}"></script>

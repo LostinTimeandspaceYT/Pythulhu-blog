@@ -1,0 +1,547 @@
+{
+  "title": "Call of Cthulhu",
+  "groups": [
+    {
+      "title": "Basic Info",
+      "fields": [
+        {
+          "label": "Name",
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "label": "Pronoun",
+          "name": "pronoun",
+          "type": "text"
+        },
+        {
+          "label": "Occupation",
+          "name": "occupation",
+          "type": "text"
+        },
+        {
+          "label": "Residence",
+          "name": "residence",
+          "type": "text"
+        },
+        {
+          "label": "Birthplace",
+          "name": "birthplace",
+          "type": "text"
+        },
+        {
+          "label": "Age",
+          "name": "age",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "title": "Characteristics",
+      "fields": [
+        {
+          "label": "STR",
+          "name": "str",
+          "type": "number"
+        },
+        {
+          "label": "CON",
+          "name": "con",
+          "type": "number"
+        },
+        {
+          "label": "DEX",
+          "name": "dex",
+          "type": "number"
+        },
+        {
+          "label": "INT",
+          "name": "int",
+          "type": "number"
+        },
+        {
+          "label": "SIZ",
+          "name": "siz",
+          "type": "number"
+        },
+        {
+          "label": "POW",
+          "name": "pow",
+          "type": "number"
+        },
+        {
+          "label": "APP",
+          "name": "app",
+          "type": "number"
+        },
+        {
+          "label": "EDU",
+          "name": "edu",
+          "type": "number"
+        },
+        {
+          "label": "Magic Points",
+          "name": "magic_points",
+          "type": "group",
+          "children": [
+            {
+              "label": "Maximum", "name": "maximum_mp", "type": "number"
+            },
+            {
+              "label": "Current", "name": "current_mp", "type": "number"
+            }
+        ]
+        },
+        {
+          "label": "Hit Points",
+          "name": "hit_points",
+          "type": "group",
+          "children": [
+            {
+              "label": "Maximum", "name": "maximum_hp", "type": "number"
+            },
+            {
+              "label": "Current", "name": "current_hp", "type": "number"
+            }
+        ]
+        },
+        {
+          "label": "Luck",
+          "name": "luck",
+          "type": "number"
+        },
+        {
+          "label": "Sanity",
+          "name": "sanity",
+          "type": "group",
+          "children": [
+            {
+              "label": "Starting", "name": "starting", "type": "number"
+            },
+            {
+              "label": "Current", "name": "current", "type": "number"
+            },
+            {
+              "label": "Temporary Insanity", "name": "temp_insane", "type": "checkbox"
+            },
+            {
+              "label": "Indefinite Insanity", "name": "indefinite", "type": "checkbox"
+            }
+          ]
+        },
+        {
+          "label": "Major Wound",
+          "name": "major_wound",
+          "type": "checkbox"
+        },
+        {
+          "label": "Unconscious",
+          "name": "unconscious",
+          "type": "checkbox"
+        },
+        {
+          "label": "Dying",
+          "name": "dying",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "title": "Skills",
+      "fields": [
+        {
+          "label": "Accounting",
+          "name": "accounting",
+          "type": "number"
+        },
+        {
+          "label": "Appraise",
+          "name": "appraise",
+          "type": "number"
+        },
+        {
+          "label": "Archaeology",
+          "name": "archaeology",
+          "type": "number"
+        },
+        {
+          "label": "Art/Craft",
+          "name": "art_craft",
+          "type": "number"
+        },
+        {
+          "label": "Charm",
+          "name": "charm",
+          "type": "number"
+        },
+        {
+          "label": "Climb",
+          "name": "climb",
+          "type": "number"
+        },
+        {
+          "label": "Computer Use",
+          "name": "computer_use",
+          "type": "number"
+        },
+        {
+          "label": "Credit Rating",
+          "name": "credit_rating",
+          "type": "number"
+        },
+        {
+          "label": "Cthulhu Mythos",
+          "name": "cthulhu_mythos",
+          "type": "number"
+        },
+        {
+          "label": "Demolitions",
+          "name": "demolitions",
+          "type": "number"
+        },
+        {
+          "label": "Disguise",
+          "name": "disguise",
+          "type": "number"
+        },
+        {
+          "label": "Diving",
+          "name": "diving",
+          "type": "number"
+        },
+        {
+          "label": "Dodge",
+          "name": "dodge",
+          "type": "number"
+        },
+        {
+          "label": "Drive Auto",
+          "name": "drive_auto",
+          "type": "number"
+        },
+        {
+          "label": "Elec. Repair",
+          "name": "elec_repair",
+          "type": "number"
+        },
+        {
+          "label": "Fast Talk",
+          "name": "fast_talk",
+          "type": "number"
+        },
+        {
+          "label": "Firearms",
+          "name": "firearms",
+          "type": "group",
+          "children": [
+            { "label": "Handgun", "name": "firearms_handgun", "type": "number" },
+            { "label": "Rifle/Shotgun", "name": "firearms_rifle_shotgun", "type": "number" }
+          ]
+        },
+        {
+          "label": "First Aid",
+          "name": "first_aid",
+          "type": "number"
+        },
+        {
+          "label": "History",
+          "name": "history",
+          "type": "number"
+        },
+        {
+          "label": "Intimidate",
+          "name": "intimidate",
+          "type": "number"
+        },
+        {
+          "label": "Jump",
+          "name": "jump",
+          "type": "number"
+        },
+        {
+          "label": "Language",
+          "name": "language",
+          "type": "group",
+          "children": [
+            { "label": "Latin", "name": "language_latin", "type": "number" },
+            { "label": "Own", "name": "language_own", "type": "number" }
+          ]
+        },
+        {
+          "label": "Law",
+          "name": "law",
+          "type": "number"
+        },
+        {
+          "label": "Library Use",
+          "name": "library ",
+          "type": "number"
+        },
+        {
+          "label": "Listen",
+          "name": "listen",
+          "type": "number"
+        },
+        {
+          "label": "Locksmith",
+          "name": "locksmith",
+          "type": "number"
+        },
+        {
+          "label": "Mech. Repair",
+          "name": "mech",
+          "type": "number"
+        },
+        {
+          "label": "Medicine",
+          "name": "medicine",
+          "type": "number"
+        },
+        {
+          "label": "Natural World",
+          "name": "natural ",
+          "type": "number"
+        },
+        {
+          "label": "Navigate",
+          "name": "navigate",
+          "type": "number"
+        },
+        {
+          "label": "Occult",
+          "name": "occult",
+          "type": "number"
+        },
+        {
+          "label": "Persuade",
+          "name": "persuade",
+          "type": "number"
+        },
+        {
+          "label": "Pilot",
+          "name": "pilot",
+          "type": "group",
+          "children": [
+            { "label": "Vehicle 1", "name": "pilot_vehicle_1", "type": "number" }
+          ]
+        },
+        {
+          "label": "Psychoanalysis",
+          "name": "psychoanalysis",
+          "type": "number"
+        },
+        {
+          "label": "Psychology",
+          "name": "psychology",
+          "type": "number"
+        },
+        {
+          "label": "Read Lips",
+          "name": "read ",
+          "type": "number"
+        },
+        {
+          "label": "Ride",
+          "name": "ride",
+          "type": "number"
+        },
+        {
+          "label": "Science",
+          "name": "science",
+          "type": "group",
+          "children": [
+            { "label": "Disciple 1", "name": "science_disciple_1", "type": "number" }
+          ]
+        },
+        {
+          "label": "Sleight of Hand",
+          "name": "sleight ",
+          "type": "number"
+        },
+        {
+          "label": "Spot Hidden",
+          "name": "spot ",
+          "type": "number"
+        },
+        {
+          "label": "Stealth",
+          "name": "stealth",
+          "type": "number"
+        },
+        {
+          "label": "Survival",
+          "name": "survival",
+          "type": "group",
+          "children": [
+            { "label": "Type 1", "name": "survival_type_1", "type": "number" }
+          ]
+        },
+        {
+          "label": "Swim",
+          "name": "swim",
+          "type": "number"
+        },
+        {
+          "label": "Throw",
+          "name": "throw",
+          "type": "number"
+        },
+        {
+          "label": "Track",
+          "name": "track",
+          "type": "number"
+        },
+        {
+          "label": "Specialty",
+          "name": "specialty",
+          "type": "group",
+          "children": [
+            { "label": "Specialty 1", "name": "specialty_1", "type": "number" },
+            { "label": "Specialty 2", "name": "specialty_2", "type": "number" },
+            { "label": "Specialty 3", "name": "specialty_3", "type": "number" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Weapons",
+      "type": "group",
+      "fields": [
+        {
+          "label" : "Weapon 1",
+          "name" : "weapon 1",
+          "type": "group",
+          "children": [
+            {
+              "label": "Name",
+              "name": "name_1",
+              "type": "text"
+            },
+            {
+              "label": "Damage",
+              "name": "damage_1",
+              "type": "text"
+            },
+            {
+              "label": "num of attacks",
+              "name": "num_attacks_1",
+              "type": "number"
+            },
+            {
+              "label": "Range",
+              "name": "range_1",
+              "type": "number"
+
+            },
+            {
+              "label": "Ammo",
+              "name": "ammo_1",
+              "type": "number"
+
+            },
+            {
+              "label": "Malf",
+              "name": "malf_1",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "label" : "Weapon 2",
+          "name" : "weapon 2",
+          "type": "group",
+          "children": [
+            {
+              "label": "Name",
+              "name": "name_2",
+              "type": "text"
+            },
+            {
+              "label": "Damage",
+              "name": "damage_2",
+              "type": "text"
+            },
+            {
+              "label": "num of attacks",
+              "name": "num_attacks_2",
+              "type": "number"
+            },
+            {
+              "label": "Range",
+              "name": "range_2",
+              "type": "number"
+
+            },
+            {
+              "label": "Ammo",
+              "name": "ammo_2",
+              "type": "number"
+
+            },
+            {
+              "label": "Malf",
+              "name": "malf_2",
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Phobias",
+      "fields": [
+        {
+          "label": "Phobia 1",
+          "name": "phobia1",
+          "type": "group",
+          "children": [
+            {
+              "label": "Name",
+              "name": "name_1",
+              "type": "text"
+            },
+            {
+              "label": "Description",
+              "name": "description_1",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "label": "Phobia 2",
+          "name": "phobia2",
+          "type": "group",
+          "children": [
+            {
+              "label": "Name",
+              "name": "name_2",
+              "type": "text"
+            },
+            {
+              "label": "Description",
+              "name": "description_2",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "label": "Phobia 3",
+          "name": "phobia3",
+          "type": "group",
+          "children": [
+            {
+              "label": "Name",
+              "name": "name_3",
+              "type": "text"
+            },
+            {
+              "label": "Description",
+              "name": "description_3",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

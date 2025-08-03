@@ -1,0 +1,96 @@
+body {
+  background-color: #1c1c1c;
+  color: #f4f1e8;
+  font-family: 'EB Garamond', serif;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #dbcdbd;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: #aaa;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #c4b89c;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.125rem;
+}
+
+footer {
+  border-top: 1px solid #333;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.page {
+  background-color: #25221f; /* deep paper-like brown */
+  border: 1px solid #3a3a3a;
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 720px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.page p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.page h1, .page h2, .page h3 {
+  color: #e0d8c3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.page a {
+  color: #c4b89c;
+  text-decoration: none;
+  border-bottom: 1px dotted #c4b89c;
+}
+
+.page a:hover {
+  color: #f4e3b2;
+  border-color: #f4e3b2;
+}
+
+.page p.italic {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #c2bba5;
+}
+
+.page a.read-more {
+  color: #c4b89c;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.page a.read-more:hover {
+  color: #f4e3b2;
+}
